@@ -1,6 +1,6 @@
 # cuda_spectrum
 
-GPU-accelerated spectrum analyzer. Reads interleaved float32 IQ samples from stdin, computes large FFTs on the GPU via cuFFT, outputs power spectrum to stdout and/or ZMQ.
+GPU-accelerated spectrum analyzer. Reads interleaved float32 IQ samples from stdin, computes large FFTs on the GPU via cuFFT, outputs power spectrum to stdout and/or ZMQ. Built this for large FFT sizes and long integration times across saved datasets.
 
 
 ## Build
