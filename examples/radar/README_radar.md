@@ -205,6 +205,18 @@ python3 spectrum_plot.py capture.bin --binary --fft 524288 --rate 96000 --center
 # Characterize
 cuda_spectrum -f 4096 -o binary < capture.cf32 > capture_4K.bin
 python3 extract_power_envelope.py capture_4K.bin --fft 4096 --rate 96000 \
+
+---
+## General Insight
+
+This example demonstrates a broader principle:
+
+Signal structure can be recovered without decoding by projecting into the appropriate analysis domain.
+
+Time-domain structure → periodicity spectrum
+Chirp structure → spectral sideband spacing
+
+The key is selecting the transformation that preserves the relevant invariant.
     --center FREQ --lo LO --hi HI | \
 python3 find_periodicity.py --plot periodicity.png
 ```
